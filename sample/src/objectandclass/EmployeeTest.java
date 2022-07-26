@@ -1,5 +1,4 @@
-package constructor;
-
+package objectandclass;
 
 class Employee
 {
@@ -7,12 +6,6 @@ class Employee
 	int employeeId;
 	String employeeName;
 	
-	
-	Employee(int employeeId,String employeeName)
-	{
-		this.employeeId=employeeId;
-		this.employeeName=employeeName;
-	}
 	
 	
 	void display()
@@ -24,13 +17,24 @@ class Employee
 	
 }
 
+
+
+
+
+
+
 public class EmployeeTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Employee emp =new Employee(126,"John");
+		Employee emp =new Employee();
 		
+		//via referencde
+				
+		
+		emp.employeeId=123;
+		emp.employeeName="Sam";
 		
 		emp.display();
 

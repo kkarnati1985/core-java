@@ -1,12 +1,15 @@
-package constructor;
+package staticpack;
+
+
 
 
 class Employee
 {
-	
 	int employeeId;
 	String employeeName;
 	
+	static String company;
+	//
 	
 	Employee(int employeeId,String employeeName)
 	{
@@ -14,12 +17,13 @@ class Employee
 		this.employeeName=employeeName;
 	}
 	
-	
 	void display()
 	{
 		System.out.println(employeeId);
 		System.out.println(employeeName);
+		System.out.println(company);
 	}
+	
 	
 	
 }
@@ -27,12 +31,21 @@ class Employee
 public class EmployeeTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Employee.company="Amazon";
 		
-		Employee emp =new Employee(126,"John");
+		Employee employee = new Employee(123,"sam");
+		employee.display();
+		
+		Employee employee2 = new Employee(124,"ram");
+		employee2.display();
+		
+		Employee.company="Google";
+		employee.display();
+		
+		employee2.display();
 		
 		
-		emp.display();
+		
 
 	}
 
