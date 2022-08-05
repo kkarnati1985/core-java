@@ -13,7 +13,7 @@
 <h1>Users List</h1>
 
 <%
-List<User> list=UserDao.getAllRecords();
+List<User> list= UserDao.getAllRecords();
 request.setAttribute("list",list);
 %>
 
